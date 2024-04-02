@@ -21,8 +21,7 @@ avg = Math.round(avg / v2.length);
 
 const addedArray = Array(NN+2).fill(avg);
 
-v2.splice(v2.length, 0, ...addedArray );
-
+v2.splice(v2.length, 0, ...addedArray ); // vedere cosa fa splice
 console.log(NN);
 console.log(v2);
 //console.log(avg);
