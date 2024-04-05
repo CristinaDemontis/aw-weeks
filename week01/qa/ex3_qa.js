@@ -1,12 +1,16 @@
 "use strict";
 
 // import (using name of my choice)
-const dayjs = require ('dayjs');
+const dayjs = require ('dayjs'); 
+// il nome lo scegliamo noi, ma di solito è lo stesso del pacchetto
+// per agevolare il tutto 
 
 // use (depends on the specific package)
-let now = dayjs();
-console.log(now.format());
+let now = dayjs(); // variabile per avere la data e orario corrente
+console.log(now.format()); // da una stringa con data e orario corrente 
 
+
+// il costruttore è semplicemente una funzione che si richiama con new Answer
 function Answer(text, respondent, score, date) {
     this.text = text;
     this.respondent = respondent;
@@ -22,7 +26,7 @@ function Question(text, questioner, date) {
     this.date = date;
     this.list = [];
 
-    this.add = (ans) => {
+    this.add = (ans) => {     // funzione per aggiungerla alla lista di domande 
         this.list.push(ans);
     }
 
@@ -58,6 +62,7 @@ function Question(text, questioner, date) {
         return sum/this.list.length;
     }
 
+    // per stampare meglio gli oggetti come stringa 
     this.str = function() { return `${this.text} asked by ${this.questioner} on ${this.date.format("YYYY-MM-DD")}`};
 }
 
