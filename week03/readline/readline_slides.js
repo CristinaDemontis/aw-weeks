@@ -1,5 +1,5 @@
 'use strict';
-const readline = require('readline');
+const readline = require('readline'); // input da tastiera 
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
