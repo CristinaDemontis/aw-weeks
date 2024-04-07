@@ -88,9 +88,11 @@ app.post('/api/answers', [
   check('respondent').isLength({min: 1}),   // as an example
   check('date').isDate({format: 'YYYY-MM-DD', strictMode: true})
 ], async (req, res) => {
-  const errors = validationResult(req);
+  const errors = validationResult(req); // dobbiamo sempre metterlo perchè senno non succede nulla 
   if (!errors.isEmpty()) {
-    return res.status(422).json({errors: errors.array()});
+    // se la validazione mostra errore, dobbiamo decidere cosa fare, 422 unprocessable content
+    return res.status(422).json({errors: errors.array()});  
+    // se si vuole ritornare qualcosa, sempre farlo ritorare nel formato json  
   }
 
   const questionId = req.body.questionId;

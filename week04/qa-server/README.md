@@ -9,9 +9,10 @@ The `qa-server` presents some APIs to perform CRUD (Create, Read, Update, Delete
 `GET /api/questions/<id>/answers`  
 `GET /api/answers/<id>`  
 `POST /api/answers`  
-`PUT /api/answers/<id>`  
+`PUT /api/answers/<id>` <!--per sovrascrivere magari qualcosa di sbagliato-->
+<!-- posso fare l'update solo di una cosa alla volta per questo id-->
 `POST /api/answers/<id>/vote`  
-`DELETE /api/answers/<id>`  
+`DELETE /api/answers/<id>` 
 
 
 ### List Questions

@@ -10,6 +10,9 @@ const app = express();
 // set-up the middlewares
 app.use(morgan('dev'));
 app.use(express.json());  // To automatically decode incoming json
+// assolutamente non dimenticarsi questa linea app.use(express.json());
+// consente di avere dei parametri da utilizzare perchè la risposta che ci 
+// arriva dal server è una stringa 
 
 app.get('/', (req, res) => {
     res.send('Hello!');
