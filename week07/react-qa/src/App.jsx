@@ -23,8 +23,10 @@ function MyHeader(props) {
     <Navbar bg="primary" variant="dark">
       <Navbar.Brand className="mx-2">
         <i className="bi bi-collection-play" />
-        {/* props.appName just in case you want to set a different app name */}
-        {props.appName || "HeapOverrun"}
+        {/* props.appName just in case you want to set a different app name 
+        no render for undefined value, serve mettere un valore di default, se per caso non ci fosse
+        il valore in  <MyHeader appNaeìme = "HeapOverRun"/>, in questo caso prende il nome dai props*/}
+        {props.appName || "HeapOverrun"} 
       </Navbar.Brand>
     </Navbar>
   );
