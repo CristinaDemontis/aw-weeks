@@ -32,7 +32,8 @@ function MyHeader(props) {
   );
 }
 
-function AnswerRow(props) {
+function AnswerRow(props) { 
+  // qua gli passa la risposta singola 
   const e = props.answer;
   return (
     <tr>
@@ -85,6 +86,7 @@ function Main(props) {
     </Row>
     <Row>
       <Col>
+      {/**qua gli passa la lista delle risposte */}
         <MyTable listOfAnswers={answerList} />
       </Col>
     </Row>
